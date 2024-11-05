@@ -42,3 +42,18 @@ interface Car2 {
 interface TodyCar extends Toy, Car2 {
   price: number;
 }
+
+//
+
+interface User {
+  name: string;
+}
+
+const Sam: User = { name: "Sam" };
+
+function showName() {
+  console.log(this.name);
+}
+
+const a = showName.bind(Sam);
+a();
